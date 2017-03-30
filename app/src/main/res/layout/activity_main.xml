@@ -37,10 +37,10 @@
         android:textSize="@dimen/h2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintRight_toLeftOf="@+id/editText" />
+        app:layout_constraintRight_toLeftOf="@+id/txtname" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -51,7 +51,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnstart"
         style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
