@@ -237,8 +237,9 @@ public class Game extends AppCompatActivity {
 
     private void dialogBoxScore() {//เเสดงคะเเนน
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("สรุปคะเเนน");
-        builder.setMessage("คุณได้คะเเนน : "+score+"คะเเนน")
+        builder.setTitle("สรุปคะเเนน : ");
+
+        builder.setMessage(getIntent().getStringExtra("name")+"ได้คะเเนน : "+score+"คะเเนน")
             .setCancelable(false)
             .setPositiveButton("ออกจากเกม", new DialogInterface.OnClickListener() {
             @Override

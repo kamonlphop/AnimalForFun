@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         //ปุ่มstart
         final EditText name = (EditText) findViewById(R.id.txtname);
         Button btnstartgame = (Button) findViewById(R.id.btnstart);
+        //start ปุ่ม
         btnstartgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     nameString = name.getText().toString().trim();
                     Toast.makeText(getApplicationContext(), "Welcome "+nameString, Toast.LENGTH_SHORT).show();
+
                     Intent clickingameintent = new Intent(MainActivity.this, Game.class);
+                    clickingameintent.putExtra("name",nameString);
+
                     startActivity(clickingameintent);
+
                 }
             }
         });//end oncreate
